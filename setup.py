@@ -1,3 +1,4 @@
+# Copyright 2021 Minseok Yang
 # Copyright 2019 New Relic, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -15,11 +16,11 @@
 from setuptools import setup
 
 # Best practice: package name should be prefixed with `newrelic_extension_`
-INSTRUMENTED_PACKAGE = "sampleproject"
+INSTRUMENTED_PACKAGE = "aredis"
 PACKAGE_NAME = "newrelic_extension_{}".format(INSTRUMENTED_PACKAGE)
 HOOKS = [
     # package_to_intercept = instrumentation_hook
-    "sample = {}.example:instrument".format(PACKAGE_NAME)
+    "aredis = {}.datastore_aredis:instrument".format(PACKAGE_NAME)
 ]
 
 setup(
