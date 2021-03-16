@@ -14,6 +14,7 @@
 # limitations under the License.
 
 from setuptools import setup
+from os import path
 
 # Best practice: package name should be prefixed with `newrelic_extension_`
 INSTRUMENTED_PACKAGE = "aredis"
@@ -23,8 +24,14 @@ HOOKS = [
     "aredis = {}.datastore_aredis:instrument".format(PACKAGE_NAME)
 ]
 
+root_dir = path.abspath(path.dirname(__file__))
+with open(path.join(root_dir, "README.rst")) as f:
+    DESCRIPTION = f.read()
+
 setup(
     name=PACKAGE_NAME,
+    long_description=DESCRIPTION,
+    long_description_content_type='text/x-rst',
     version="0.1",
     packages=[PACKAGE_NAME],
     package_dir={PACKAGE_NAME: "src"},
