@@ -1,30 +1,19 @@
-New Relic Python Agent Extension Scaffold
-=========================================
+newrelic-extension-aredis
+===========================================
 
-This repository provides a basic skeleton for creating instrumentation packages
-that plug into the Python Agent.
+New Relic Python Agent Extension For `aredis`_ asyncio Redis library
 
-In this example, instrumentation is provided for the `sampleproject
-<https://github.com/pypa/sampleproject>`_ from pypa.
+.. _aredis: https://github.com/NoneGG/aredis
 
 Requirements
 ------------
 
-Loading New Relic python agent extensions relies on the availability of the
-``iter_entry_points`` API in `setuptools`_. Therefore, `setuptools`_ must be
-available in the application environment.
+- Python (3.7+)
+- `aredis`_
+- `New Relic Python Agent`_
 
 .. _setuptools: https://setuptools.readthedocs.io/en/latest/pkg_resources.html#convenience-api
-
-
-Getting Started
----------------
-
-#. Fork this repository, changing the name as appropriate.
-#. Modify the `setup.py`_ ``INSTRUMENTED_PACKAGE`` variable to point to the package you are instrumenting.
-#. Update the `setup.py`_ ``HOOKS`` variable to add packages and hook functions.
-
-.. _setup.py: setup.py
+.. _New Relic Python Agent: https://docs.newrelic.com/docs/agents/python-agent/installation/standard-python-agent-install/
 
 Testing
 -------
@@ -40,11 +29,13 @@ All testing can be done through `tox <https://github.com/tox-dev/tox>`_.
 Usage
 -----
 
-In the application, the extension can be pip installed.
+Install the extension in the application:
 
 .. code-block:: sh
 
-    pip install newrelic_extension_sampleproject
+    pip install newrelic-extension-aredis
+
+No additional steps are required to enable this extension! Newrelic agent will now trace `aredis`_ calls.
 
 License
 -------
