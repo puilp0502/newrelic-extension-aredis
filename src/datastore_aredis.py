@@ -79,7 +79,7 @@ def _wrap_Redis_method_wrapper_(module, instance_class_name, operation):
         transaction = current_transaction()
 
         if transaction is None:
-            return wrapped(*args, **kwargs)
+            return await wrapped(*args, **kwargs)
 
         dt = DatastoreTrace(
                 product='Redis',

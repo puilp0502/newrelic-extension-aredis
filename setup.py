@@ -32,7 +32,7 @@ setup(
     name=PACKAGE_NAME,
     long_description=DESCRIPTION,
     long_description_content_type='text/x-rst',
-    version="0.1",
+    version="0.2",
     packages=[PACKAGE_NAME],
     package_dir={PACKAGE_NAME: "src"},
     entry_points={"newrelic.hooks": HOOKS},
