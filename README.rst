@@ -1,3 +1,7 @@
+NOTE: THIS LIBRARY IS DEPRECATED
+====
+Starting from Newrelic Agent v7.6.0.173, `it supports aredis library natively <https://docs.newrelic.com/docs/release-notes/agent-release-notes/python-release-notes/python-agent-70600173/>`_. Upgrade your Newrelic Agent instead of using this library!
+
 newrelic-extension-aredis
 ===========================================
 
